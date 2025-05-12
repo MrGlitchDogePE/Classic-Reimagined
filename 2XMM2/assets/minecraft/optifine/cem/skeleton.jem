@@ -1,0 +1,24 @@
+{
+	"models":
+	[
+	{
+		# Skeleteleteleton
+		"part": "body",
+		"attach": true,
+		
+		"animations":
+		[
+		{
+			"right_arm.rx": "-1.570796 + sin(age * 0.067) * 0.05",
+			"right_arm.ry": "-0.1",
+			"right_arm.rz": "cos(age * 0.09) * 0.05 + 0.05",
+			
+			# Mirror right arm
+			"left_arm.rx": "-right_arm.rx + pi",
+			"left_arm.ry": "0.1",
+			"left_arm.rz": "-right_arm.rz"
+		}
+		]
+	}
+	]
+}
