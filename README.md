@@ -3,9 +3,11 @@ You can download Classic Reimagined from both [Modrinth](https://modrinth.com/re
 
 # Classic Reimagined 7 Install Guide for 1.20
 
-Download Classic Reimagined 7 here, and also download Beta Continuum [here](https://www.planetminecraft.com/texture-pack/beta-continuum) or also [here](https://github.com/shmoobalizer/Beta_Continuum/releases)
+Download Classic Reimagined 7 here, and also download Beta Continuum [here](https://www.planetminecraft.com/texture-pack/beta-continuum) or also [here](https://github.com/shmoobalizer/Beta_Continuum/releases) and go to
 
-and put the following resource packs in the following order:
+Options > Resource Packs > Open Pack Folder
+
+drag the resource packs and put the following resource packs in the following order:
 
 - Classic Reimagined 7
 - Beta Continuum
