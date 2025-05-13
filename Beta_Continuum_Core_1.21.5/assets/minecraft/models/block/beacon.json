@@ -1,0 +1,52 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"ambientocclusion": false,
+	"textures": {
+		"2": "block/beacon",
+		"particle": "block/glass",
+		"glass": "block/glass",
+		"obsidian": "block/obsidian"
+	},
+	"elements": [
+		{
+			"name": "base",
+			"from": [0, 0.1, 0],
+			"to": [16, 3, 16],
+			"faces": {
+				"north": {"uv": [0, 13, 16, 16], "texture": "#obsidian"},
+				"east": {"uv": [0, 13, 16, 16], "texture": "#obsidian"},
+				"south": {"uv": [0, 13, 16, 16], "texture": "#obsidian"},
+				"west": {"uv": [0, 13, 16, 16], "texture": "#obsidian"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#obsidian"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#obsidian"}
+			}
+		},
+		{
+			"name": "glass",
+			"from": [0, 3, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 13], "texture": "#glass"},
+				"east": {"uv": [0, 0, 16, 13], "texture": "#glass"},
+				"south": {"uv": [0, 0, 16, 13], "texture": "#glass"},
+				"west": {"uv": [0, 0, 16, 13], "texture": "#glass"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#glass"},
+				"down": {"uv": [0, 0, 16, 13], "texture": "#glass"}
+			}
+		},
+		{
+			"name": "piss ball",
+			"from": [3, 3, 3],
+			"to": [13, 13, 13],
+			"faces": {
+				"north": {"uv": [3, 3, 13, 13], "texture": "#2"},
+				"east": {"uv": [3, 3, 13, 13], "texture": "#2"},
+				"south": {"uv": [3, 3, 13, 13], "texture": "#2"},
+				"west": {"uv": [3, 3, 13, 13], "texture": "#2"},
+				"up": {"uv": [3, 3, 13, 13], "texture": "#2"},
+				"down": {"uv": [3, 3, 13, 13], "texture": "#2"}
+			}
+		}
+	]
+}

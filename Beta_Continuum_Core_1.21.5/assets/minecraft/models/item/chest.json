@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/template_chest",
+  "textures": {
+    "particle": "minecraft:block/oak_planks",
+    "chest": "minecraft:entity/chest/normal"
+  }
+}
