@@ -1,7 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "block/campfire_fire",
-        "layer1": "item/campfire_overlay"
-    }
-}
