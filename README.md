@@ -3,7 +3,7 @@ You can download Classic Reimagined from both [Modrinth](https://modrinth.com/re
 
 # Classic Reimagined 7 Install Guide for 1.20
 
-Download Classic Reimagined 7 here, and also download Beta Continuum [here](https://www.planetminecraft.com/texture-pack/beta-continuum) or also [here](https://github.com/shmoobalizer/Beta_Continuum/releases) and go to
+Download Classic Reimagined 7 [here](https://github.com/MrGlitchDogePE/v7.12.3_MrGlitchDogePE._Better_Default_7), and also download Beta Continuum [here](https://www.planetminecraft.com/texture-pack/beta-continuum) and go to the following path:
 
 Options > Resource Packs > Open Pack Folder
 
