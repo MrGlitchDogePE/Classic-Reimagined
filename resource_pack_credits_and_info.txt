@@ -15,7 +15,7 @@ Published Jul 4th, 2021.
 
 Returns the classic feel to Minecraft :D 
 
-CREDITS: 
+CREDITS FROM BETA CONTINUUM: 
 
 Mojang, 
 especially jeb, notch, junkboy, Johan A, Ninni L, BombBoy, Martin J, and Markus K 
