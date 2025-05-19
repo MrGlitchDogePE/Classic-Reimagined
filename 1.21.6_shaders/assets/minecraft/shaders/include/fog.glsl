@@ -14,7 +14,7 @@ uniform int shape;  // Declared shape to prevent undefined variable issue
 
 float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
     float adjustedFogStart = fogStart / 3.5384349071477304492426263330319;
-    float adjustedFogEnd = fogEnd * 1.0190800140992178506083297460466;
+    float adjustedFogEnd = fogEnd * 1.0216277141344658952348505704117;
 
     if (vertexDistance <= adjustedFogStart) {
         return 0.0;
@@ -31,7 +31,7 @@ float total_fog_value(float sphericalVertexDistance, float cylindricalVertexDist
 
 vec4 apply_fog(vec4 inColor, float sphericalVertexDistance, float cylindricalVertexDistance, float environmentalStart, float environmentalEnd, float renderDistanceStart, float renderDistanceEnd, vec4 fogColor) {
     float fogValue = total_fog_value(sphericalVertexDistance, cylindricalVertexDistance, environmentalStart, environmentalEnd, renderDistanceStart, renderDistanceEnd);
-    return vec4(mix(inColor.rgb, fogColor.rgb, fogValue * fogColor.a), inColor.a);
+    return vec4(mix(inColor.rgb, vec3(0.753, 0.847, 1.0), fogValue * fogColor.a), inColor.a);
 }
 
 float fog_spherical_distance(vec3 pos) {
