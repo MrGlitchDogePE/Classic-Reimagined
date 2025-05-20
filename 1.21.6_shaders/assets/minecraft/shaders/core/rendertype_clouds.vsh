@@ -29,7 +29,7 @@ const float VANILLA_CLOUD_HEIGHT = 192.0;
 
 const float CLOUD_HEIGHT = 108.0;
 
-#moj_import <fog.glsl>
+#moj_import <fog_old_cylinder.glsl>
 #moj_import <dynamictransforms.glsl>
 #moj_import <projection.glsl>
 
@@ -138,6 +138,6 @@ void main() {
     vec3 pos = (faceVertex * CellSize) + (vec3(cellX, 0, cellZ) * CellSize) + CloudOffset - vec3(0, VANILLA_CLOUD_HEIGHT - CLOUD_HEIGHT, 0);
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
 
-    vertexDistance = fog_spherical_distance(pos);
+    vertexDistance = fog_cylindrical_distance(pos);
     vertexColor = (useTopColor ? faceColors[1] : faceColors[direction]) * CloudColor;
 }
