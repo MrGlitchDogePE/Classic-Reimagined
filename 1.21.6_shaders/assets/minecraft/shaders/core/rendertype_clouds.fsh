@@ -38,7 +38,7 @@ out vec4 fragColor;
 
 void main() {
     
-    // the 9 closest cloud blocks always have all faces those get distortedd, so discard them
+    // the 9 closest cloud blocks always have all faces those get distorted, so discard them
     /*if (xSize1.y > 0 && xSize2.y > 0) {
       if (xSize1.x/xSize1.y - xSize2.x/xSize2.y > 13.0) {
         discard;
