@@ -29,7 +29,7 @@ const float VANILLA_CLOUD_HEIGHT = 192.0;
 
 const float CLOUD_HEIGHT = 108.0;
 
-#moj_import <fog_old_cylinder.glsl>
+#moj_import <fog_planar.glsl>
 #moj_import <dynamictransforms.glsl>
 #moj_import <projection.glsl>
 
