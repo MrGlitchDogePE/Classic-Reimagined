@@ -22,9 +22,12 @@ float linear_fog_fade(float vertexDistance, float fogStart, float fogEnd) {
 
     return smoothstep(fogEnd, fogStart, vertexDistance);
 }
+float fog_spherical_distance(vec3 pos) {
+    return length(pos);
+}
 
 float fog_distance(vec3 pos, int shape) {
-    if (shape == 0) {
+    if (shape == 1) {
         return length(pos);
     } else {
         float distXZ = length(pos.xz);
