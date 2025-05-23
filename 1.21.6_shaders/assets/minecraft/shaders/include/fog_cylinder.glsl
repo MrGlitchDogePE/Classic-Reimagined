@@ -11,8 +11,8 @@ layout(std140) uniform Fog {
 };
 
 float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
-    float adjustedFogStart = fogStart / 3.5384349071477304492426263330319;
-    float adjustedFogEnd = fogEnd * 1.0216277141344658952348505704117;
+    float adjustedFogStart = fogStart / 3.5969351459790425888109963041923;
+    float adjustedFogEnd = fogEnd * 0.99919548688714581058448359296267;
 
     if (vertexDistance <= adjustedFogStart) {
         return 0.0;
