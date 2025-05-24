@@ -2,8 +2,8 @@
 
 vec4 linear_fog(vec4 inColor, float vertexDistance, float fogStart, float fogEnd, vec4 fogColor) {
     // Apply adjustments to fogStart and fogEnd
-    fogStart = fogStart / 3.594;
-    fogEnd = fogEnd * 1.0133;
+    fogStart = fogStart / 2.1676291603621477826284077453587;
+    fogEnd = fogEnd * 1.0461010009450094778458158076771;
 
     if (vertexDistance <= fogStart) {
         return inColor;
@@ -27,11 +27,5 @@ float fog_spherical_distance(vec3 pos) {
 }
 
 float fog_distance(vec3 pos, int shape) {
-    if (shape == 1) {
         return length(pos);
-    } else {
-        float distXZ = length(pos.xz);
-        float distY = abs(pos.y);
-        return max(distXZ, distY);
-    }
 }
