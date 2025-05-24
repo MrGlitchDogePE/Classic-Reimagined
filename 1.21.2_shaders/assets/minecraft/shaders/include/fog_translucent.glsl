@@ -23,7 +23,7 @@ float linear_fog_fade(float vertexDistance, float fogStart, float fogEnd) {
 }
 
 float fog_distance(vec3 pos, int shape) {
-    if (shape == 0) {
+    if (shape == 1) {
         return length(pos);
     } else {
         float distXZ = length(pos.xz);
