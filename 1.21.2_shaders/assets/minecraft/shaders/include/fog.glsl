@@ -20,7 +20,7 @@ float linear_fog_fade(float vertexDistance, float fogStart, float fogEnd) {
         return 0.0;
     }
 
-    return smoothstep(fogEnd, fogStart, vertexDistance);
+    return (fogEnd, fogStart, vertexDistance);
 }
 float fog_spherical_distance(vec3 pos) {
     return length(pos);
