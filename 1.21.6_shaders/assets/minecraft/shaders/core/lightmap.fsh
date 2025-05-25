@@ -12,59 +12,30 @@ layout(std140) uniform LightmapInfo {
     vec3 SkyLightColor;
 } lightmapInfo;
 
+const float[] BETA_LIGHT = float[](
+    0.0434389140271494, 0.0627450980392157, 0.0823529411764706, 0.1019607843137255, 0.1254901960784314, 0.1529411764705882, 
+    0.1843137254901961, 0.2196078431372549, 0.2588235294117647, 0.3058823529411765, 0.3647058823529412, 
+    0.4352941176470588, 0.5215686274509804, 0.6352941176470588, 0.7843331391962726, 1.0
+);
+
 in vec2 texCoord;
 
 out vec4 fragColor;
 
-float get_brightness(float level) {
-    float curved_level = level / (4.0 - 3.0 * level);
-    return mix(curved_level, 1.0, lightmapInfo.AmbientLightFactor);
-}
-
-vec3 notGamma(vec3 x) {
-    vec3 nx = 1.0 - x;
-    return 1.0 - nx * nx * nx * nx;
+int spread(float f, int x) {
+    return clamp(int(floor(f * (float(x) + 1.0))), 0, x);
 }
 
 void main() {
-    float block_brightness = get_brightness(floor(texCoord.x * 16) / 15) * lightmapInfo.BlockFactor;
-    float sky_brightness = get_brightness(floor(texCoord.y * 16) / 15) * lightmapInfo.SkyFactor;
-
-    // cubic nonsense, dips to yellowish in the middle, white when fully saturated
-    vec3 color = vec3(
-        block_brightness,
-        block_brightness * ((block_brightness * 0.6 + 0.4) * 0.6 + 0.4),
-        block_brightness * (block_brightness * block_brightness * 0.6 + 0.4)
-    );
-
-    if (lightmapInfo.UseBrightLightmap != 0) {
-        color = mix(color, vec3(0.99, 1.12, 1.0), 0.25);
-        color = clamp(color, 0.0, 1.0);
-    } else {
-        color += lightmapInfo.SkyLightColor * sky_brightness;
-        color = mix(color, vec3(0.75), 0.04);
-
-        vec3 darkened_color = color * vec3(0.7, 0.6, 0.6);
-        color = mix(color, darkened_color, lightmapInfo.DarkenWorldFactor);
-    }
-
     if (lightmapInfo.NightVisionFactor > 0.0) {
-        // scale up uniformly until 1.0 is hit by one of the colors
-        float max_component = max(color.r, max(color.g, color.b));
-        if (max_component < 1.0) {
-            vec3 bright_color = color / max_component;
-            color = mix(color, bright_color, lightmapInfo.NightVisionFactor);
-        }
+        fragColor = vec4(vec3(1.0), 1.0);
+        return;
     }
 
-    if (lightmapInfo.UseBrightLightmap == 0) {
-        color = clamp(color - vec3(lightmapInfo.DarknessScale), 0.0, 1.0);
-    }
+    int block_light = spread(texCoord.x, 15);
+    int sky_factor = clamp(spread(1.0 - lightmapInfo.SkyFactor, 15), 0, 11);
+    int sky_light = clamp(spread(texCoord.y, 15), 0, 15);
 
-    vec3 notGamma = notGamma(color);
-    color = mix(color, notGamma, lightmapInfo.BrightnessFactor);
-    color = mix(color, vec3(0.75), 0.00);
-    color = clamp(color, 0.0, 1.0);
-
-    fragColor = vec4(color, 1.0);
+    float light = max(BETA_LIGHT[block_light], BETA_LIGHT[sky_light - sky_factor]);
+    fragColor = vec4(vec3(clamp(light - lightmapInfo.DarknessScale * 0.7, 0.05, 1)), 1.0);
 }
