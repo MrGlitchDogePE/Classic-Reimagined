@@ -55,44 +55,32 @@ const vec3[] vertices = vec3[](
     vec3(1, 0, 0),
     vec3(1, 0, 1),
     vec3(0, 0, 1),
-    vec3(0, 0, 1),
     vec3(0, 0, 0),
-    vec3(1, 0, 0),
     // Top face
     vec3(0, 1, 0),
     vec3(0, 1, 1),
     vec3(1, 1, 1),
-    vec3(1, 1, 1),
     vec3(1, 1, 0),
-    vec3(0, 1, 0),
     // North face
     vec3(0, 0, 0),
     vec3(0, 1, 0),
     vec3(1, 1, 0),
-    vec3(1, 1, 0),
     vec3(1, 0, 0),
-    vec3(0, 0, 0),
     // South face
     vec3(1, 0, 1),
     vec3(1, 1, 1),
     vec3(0, 1, 1),
-    vec3(0, 1, 1),
     vec3(0, 0, 1),
-    vec3(1, 0, 1),
     // West face
     vec3(0, 0, 1),
     vec3(0, 1, 1),
     vec3(0, 1, 0),
-    vec3(0, 1, 0),
     vec3(0, 0, 0),
-    vec3(0, 0, 1),
     // East face
     vec3(1, 0, 0),
     vec3(1, 1, 0),
     vec3(1, 1, 1),
-    vec3(1, 1, 1),
-    vec3(1, 0, 1),
-    vec3(1, 0, 0)
+    vec3(1, 0, 1)
 );
 
 const vec4[] faceColors = vec4[](
@@ -111,8 +99,8 @@ const vec4[] faceColors = vec4[](
 );
 
 void main() {
-    int quadVertex = gl_VertexID % 6;
-    int index = (gl_VertexID / 6) * 3;
+    int quadVertex = gl_VertexID % 4;
+    int index = (gl_VertexID / 4) * 3;
     int cellX = texelFetch(CloudFaces, index).r;
     int cellZ = texelFetch(CloudFaces, index + 1).r;
     int dirAndFlags = texelFetch(CloudFaces, index + 2).r;
@@ -134,7 +122,7 @@ void main() {
     bool useTopColor = (dirAndFlags & FLAG_USE_TOP_COLOR) == FLAG_USE_TOP_COLOR;
     cellX = (cellX << 1) | ((dirAndFlags & FLAG_EXTRA_X) >> 7);
     cellZ = (cellZ << 1) | ((dirAndFlags & FLAG_EXTRA_Z) >> 6);
-    vec3 faceVertex = vertices[(direction * 6) + (isInsideFace ? 5 - quadVertex : quadVertex)];
+    vec3 faceVertex = vertices[(direction * 4) + (isInsideFace ? 3 - quadVertex : quadVertex)];
     vec3 pos = (faceVertex * CellSize) + (vec3(cellX, 0, cellZ) * CellSize) + CloudOffset - vec3(0, VANILLA_CLOUD_HEIGHT - CLOUD_HEIGHT, 0);
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
 
