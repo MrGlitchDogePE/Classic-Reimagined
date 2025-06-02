@@ -1,0 +1,5 @@
+{
+  "sodium.console.core_shaders_error": "Compatibility for Sodium is deprecated for Classic Reimagined 10",
+  "sodium.console.core_shaders_warn": "Classic Reimagined 10 does not support Sodium",
+  "sodium.console.core_shaders_info": "Please switch to OptiFine"
+}
