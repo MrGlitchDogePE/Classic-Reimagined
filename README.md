@@ -14,5 +14,3 @@ drag the resource packs and put the following resource packs in the following or
 - Programmer Art
 
 Once it's done, you can play Minecraft with **Classic Reimagined 7** in Minecraft 1.20
-
-test
