@@ -1,6 +1,6 @@
 {
-  "vertex": "sodium:clouds",
-  "fragment": "sodium:clouds",
+  "vertex": "minecraft:clouds",
+  "fragment": "minecraft:clouds",
   "defines": {
     "values": {
       "ALPHA_CUTOUT": "0.1"
