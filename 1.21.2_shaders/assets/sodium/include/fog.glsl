@@ -1,1 +1,0 @@
-#import <minecraft:include/fog.glsl>
