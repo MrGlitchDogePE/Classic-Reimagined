@@ -4,7 +4,7 @@ const int FOG_SHAPE_CYLINDRICAL = 1;
 vec4 _linearFog(vec4 fragColor, float fragDistance, vec4 fogColor, float fogStart, float fogEnd) {
 #ifdef USE_FOG
     fogStart = fogStart * 0.0;
-    fogEnd = fogEnd * 1.0;
+    fogEnd = fogEnd * 1.0132739486807940002673196089301;
     if (fragDistance <= fogStart) {
         return fragColor;
     }
