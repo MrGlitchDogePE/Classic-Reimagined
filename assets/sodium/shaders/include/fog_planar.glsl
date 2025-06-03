@@ -1,5 +1,7 @@
 #version 150
 
+#moj_import <dynamictransforms.glsl>
+
 layout(std140) uniform Fog {
     vec4 FogColor;
     float FogEnvironmentalStart;
@@ -9,8 +11,6 @@ layout(std140) uniform Fog {
     float FogSkyEnd;
     float FogCloudsEnd;
 };
-
-uniform int shape;  // Declared shape to prevent undefined variable issue
 
 float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
     float adjustedFogStart = fogStart / 3.5969351459790425888109963041923;
@@ -35,15 +35,9 @@ vec4 apply_fog(vec4 inColor, float sphericalVertexDistance, float cylindricalVer
 }
 
 float fog_spherical_distance(vec3 pos) {
-    return length(pos);
+    return abs((ModelViewMat * vec4(pos, 1.0)).z); // No division
 }
 
 float fog_cylindrical_distance(vec3 pos) {
-    if (shape == 0) {  // Now shape is defined as a uniform, ensuring proper behavior
-        return length(pos);
-    } else {
-        float distXZ = length(pos.xz);
-        float distY = abs(pos.y);
-        return max(distXZ, distY);
-    }
+    return fog_spherical_distance(pos); // Same value
 }

@@ -10,8 +10,6 @@ layout(std140) uniform Fog {
     float FogCloudsEnd;
 };
 
-uniform int shape;  // Declared shape to prevent undefined variable issue
-
 float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
     float adjustedFogStart = fogStart / 3.5969351459790425888109963041923;
     float adjustedFogEnd = fogEnd * 1.0132739486807940002673196089301;
@@ -39,11 +37,7 @@ float fog_spherical_distance(vec3 pos) {
 }
 
 float fog_cylindrical_distance(vec3 pos) {
-    if (shape == 0) {  // Now shape is defined as a uniform, ensuring proper behavior
-        return length(pos);
-    } else {
-        float distXZ = length(pos.xz);
-        float distY = abs(pos.y);
-        return max(distXZ, distY);
-    }
+    float distXZ = length(pos.xz);
+    float distY = abs(pos.y);
+    return max(distXZ, distY);
 }
