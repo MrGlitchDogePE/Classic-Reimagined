@@ -1,5 +1,7 @@
 #version 150
 
+#moj_import <dynamictransforms.glsl>
+
 layout(std140) uniform Fog {
     vec4 FogColor;
     float FogEnvironmentalStart;
@@ -35,15 +37,19 @@ vec4 apply_fog(vec4 inColor, float sphericalVertexDistance, float cylindricalVer
 }
 
 float fog_spherical_distance(vec3 pos) {
+  if (shape == 0) {  // if shape is set to 1, it'll be cylindrical, if it's set to 0 it'll be a sphere
     return length(pos);
+  } else {
+    float distXZ = length(pos.xz);
+    float distY = abs(pos.y);
+    return max(distXZ, distY);
+  }
 }
 
 float fog_cylindrical_distance(vec3 pos) {
-    if (shape == 0) {  // Now shape is defined as a uniform, ensuring proper behavior
+    if (shape == 0) {  // if shape is set to 1, it'll be planar, if it's set to 0 it'll be a sphere
         return length(pos);
     } else {
-        float distXZ = length(pos.xz);
-        float distY = abs(pos.y);
-        return max(distXZ, distY);
+      return abs((ModelViewMat * vec4(pos, 1.0)).z); // No division
     }
 }
