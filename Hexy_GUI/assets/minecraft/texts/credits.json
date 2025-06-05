@@ -326,6 +326,366 @@
         ]
       },
       {
+        "discipline": "Communications",
+        "titles": [
+          {
+            "title": "Media Director",
+            "names": [
+              "Hans Abrahamsson",
+              "Vu Bui"
+            ]
+          },
+          {
+            "title": "Director of Communications",
+            "names": [
+              "Emil Rodriguez",
+              "Owen Jones",
+              "Regan O'Leary",
+              "Thomas Wiborgh"
+            ]
+          },
+          {
+            "title": "Communications Managers",
+            "names": [
+              "Addie Coronado",
+              "Adam Martinsson",
+              "Adam Pannel (Assembly Media, Inc)",
+              "Alexis Crofts (Assembly Media, Inc)",
+              "Alli Cohen",
+              "Christian Delgado",
+              "Christopher de Haan (Simplicity Consulting Inc)",
+              "Cristina Anderca",
+              "Cynthia Park (Assembly Media, Inc)",
+              "Elias Arnehall",
+              "Erin Dwyer",
+              "Holly Amber Smith",
+              "Hollis Wacker-Leja",
+              "Jane Billet",
+              "Jessica Xie",
+              "Jessie Steinberg",
+              "John Schork",
+              "Katie Guo (Assembly Media, Inc)",
+              "Maysan Zubi (Assembly Media, Inc)",
+              "Michael Rougeau (Assembly Media, Inc)",
+              "Petra Tell",
+              "Ramona Suris (Assembly Media, Inc)",
+              "Rebecca Gordius",
+              "Richard Chen",
+              "Vanessa Mora",
+              "Wesley Gore (Assembly Media, Inc)",
+              "Zulai Serrano Shimamoto"
+            ]
+          },
+          {
+            "title": "Content Coordinators",
+            "names": [
+              "Andreas Thomasson",
+              "Sara Lempiäinen"
+            ]
+          },
+          {
+            "title": "Creative Writers",
+            "names": [
+              "Emily Richardson",
+              "Julius Olofsson",
+              "Linn Viberg",
+              "Per Landin",
+              "Sophia Austin",
+              "Sophia Dankis"
+            ]
+          },
+          {
+            "title": "Director of Community",
+            "names": [
+              "Nea Aime Rollan"
+            ]
+          },
+          {
+            "title": "Social Media Lead",
+            "names": [
+              "Sean Flanery"
+            ]
+          },
+          {
+            "title": "Social Media Managers",
+            "names": [
+              "Aleksander Gilyadov (Aston Carter Inc)",
+              "Alex Fleck (Adecco)",
+              "Angelica Batth (Kforce, Inc)",
+              "Anthony Toczek",
+              "Cassandra Jones (Cypress Human Capital)",
+              "Chad Oetken (Troy Consulting LLC)",
+              "David Ramos (Collabera, LLC)",
+              "Jeremy Chan (Aerotek, Inc)",
+              "Natascha Cox",
+              "Paulina Espinoza-Gonzalez (Kforce, Inc)",
+              "RJ Lesterio (Ranstad)",
+              "Ross Keatley",
+              "Will Mowery (Harvey Nash, Inc)",
+              "William Chang (Randstad)"
+            ]
+          },
+          {
+            "title": "Community Management Lead",
+            "names": [
+              "Joel Sasaki"
+            ]
+          },
+          {
+            "title": "Community Managers",
+            "names": [
+              "Cameron Thomas",
+              "DèJa Easter (Apex Systems, Inc)",
+              "Emily Hayes (Averro LLC)",
+              "Glory Robinson (Experis)",
+              "Gustav Höglund",
+              "Helen Zbihlyj",
+              "Jay Wells",
+              "Kristina Horner",
+              "Lindsey Schaal",
+              "Matt Gartzke",
+              "Matt Martin",
+              "Michelle Archer Waterman",
+              "Nadine Ebri (Apex Systems, Inc)",
+              "Sophia Lyon",
+              "Trella Rath (Corestaff)"
+            ]
+          },
+          {
+            "title": "Content Managers",
+            "names": [
+              "John Hansen (Insight Global, Inc)",
+              "Nadja Anderberg",
+              "Niclas Fredriksson",
+              "Oskar Thysell",
+              "Reagan Sterner (Apex Systems, Inc)"
+            ]
+          },
+          {
+            "title": "Publishing Editor",
+            "names": [
+              "Jay Castello",
+              "Lauren Marklund",
+              "Marsh Davies",
+              "Tom Stone"
+            ]
+          },
+          {
+            "title": "Chief Storyteller",
+            "names": [
+              "Lydia Winters"
+            ]
+          },
+          {
+            "title": "Lead Web Developer",
+            "names": [
+              "Mark Jawad"
+            ]
+          },
+          {
+            "title": "Web Designers",
+            "names": [
+              "Paul Madlon (Ten Gun Design, Inc)",
+              "Taylor Kasony (eXcell, a division of CompuCom)"
+            ]
+          }
+        ]
+      },
+      {
+        "discipline": "Design",
+        "titles": [
+          {
+            "title": "Game Director, Minecraft",
+            "names": [
+              "Agnes Larsson",
+              "Henrik Pettersson"
+            ]
+          },
+          {
+            "title": "Creative Director, Brand",
+            "names": [
+              "Markus Toivonen"
+            ]
+          },
+          {
+            "title": "Creative Director",
+            "names": [
+              "John Hendricks",
+              "John Yamamoto"
+            ]
+          },
+          {
+            "title": "Creative Directors, Games",
+            "names": [
+              "Craig Leigh",
+              "Magnus Nedfors",
+              "Måns Olson"
+            ]
+          },
+          {
+            "title": "Creative Director, Entertainment",
+            "names": [
+              "Torfi Frans Ólafsson"
+            ]
+          },
+          {
+            "title": "Creative Managers",
+            "names": [
+              "Alex Macleod",
+              "Jesse Merriam",
+              "Louise Smith (Formosa)",
+              "Michael Harnisch",
+              "Rasmus Eriksson",
+              "Samir Belarbi"
+            ]
+          },
+          {
+            "title": "Design Directors",
+            "names": [
+              "Antti Meriluoto",
+              "Laura de Llorens Garcia",
+              "Orvar Halldorsson"
+            ]
+          },
+          {
+            "title": "Design Managers",
+            "names": [
+              "Art Usher",
+              "Jesper Staafjord",
+              "Oskar Hansson Wettergren",
+              "Peter Diar Friman",
+              "Rabi Afram",
+              "Robin Hedin"
+            ]
+          },
+          {
+            "title": "Lead Game Designers",
+            "names": [
+              "Cory Scheviak",
+              "Daniel Jansson",
+              "Guillaume Mroz",
+              "Matthew Gatland",
+              "Nickole Li",
+              "Rob Poerschke",
+              "Robin V Vincent",
+              "Uladzislau Charnaus"
+            ]
+          },
+          {
+            "title": "Game Designers",
+            "names": [
+              "Brandon Franklin (Insight Global, Inc)",
+              "Brandon Pearce",
+              "Christian Berg",
+              "Colten Murphy (TEKsystems, Inc.)",
+              "Colton Phillips",
+              "Dana Lee (Insight Global, Inc)",
+              "Daniel Brynolf",
+              "Giuseppe Libonati (Insight Global, Inc)",
+              "H Jones",
+              "Henrik Kniberg",
+              "Jared Greiner",
+              "Jesse A Hibbs (TEKsystems, Inc.)",
+              "Jesper Westlund",
+              "Justice Mealer (Insight Global, Inc)",
+              "Katherine Durkin (Insight Global, Inc)",
+              "Kelsey Howard",
+              "Kyle Wood (Insight Global, Inc)",
+              "Mark Anthony Esparagoza (Insight Global, Inc)",
+              "Melissa Andrews (Insight Global, Inc)",
+              "Michael Söderqvist",
+              "Michael Stagnitta",
+              "Miko Charbonneau",
+              "Nikolaj Kledzik",
+              "Nir Vaknin",
+              "Pontus Hammarberg",
+              "Pradnesh Patil",
+              "Steve Enos",
+              "Tate Sliwa (Insight Global, Inc)",
+              "Tod Pang"
+            ]
+          },
+          {
+            "title": "Narrative Director",
+            "names": [
+              "Kevin Grace"
+            ]
+          },
+          {
+            "title": "Narrative Director, Entertainment",
+            "names": [
+              "Alex Wiltshire"
+            ]
+          },
+          {
+            "title": "Narrative Designer",
+            "names": [
+              "Max Herngren"
+            ]
+          },
+          {
+            "title": "User Experience Design Directors",
+            "names": [
+              "Anna Wendelin",
+              "Carlos Lidón",
+              "Stephen Whetstine",
+              "Tobias Ahlin"
+            ]
+          },
+          {
+            "title": "User Experience Design Leads",
+            "names": [
+              "Josefine Lindqvist",
+              "Unn Swanström"
+            ]
+          },
+          {
+            "title": "User Experience Designers",
+            "names": [
+              "Aksel Englund",
+              "Alejandra Ricciardi (Globant)",
+              "Clory Luo (Formosa)",
+              "Connor Tompsett (CompuCom Systems, Inc)",
+              "Eric Alm",
+              "Gaby Salinas",
+              "Hajar Harda",
+              "Imani Ricks",
+              "Jem Alexander",
+              "Jin Shin",
+              "Jonathan Paton Gallina",
+              "Kailin Li (TEKsystems, Inc.)",
+              "Karolin Pettersson",
+              "Lily Ekman",
+              "Lucas Morales Sousa",
+              "Margot Laucournet",
+              "Melissa Kay (Prieto)",
+              "Nirali Vadera (Ascendion, Inc)",
+              "Oscar Nilsson",
+              "Sabrina Cuevas-Pagoaga (Randstad)",
+              "Sam Paye (Aquent, LLC)",
+              "Sandra Bornemark",
+              "Sarah Mack (Digital Intelligence Systems, LLC)",
+              "Sebastian Melchor Hedman",
+              "Shaun Basil Mendonsa",
+              "Tom Keen",
+              "William Hollowell"
+            ]
+          },
+          {
+            "title": "User Experience Writer",
+            "names": [
+              "Juan Buis"
+            ]
+          },
+          {
+            "title": "User Experience Intern",
+            "names": [
+              "Axel Grefberg"
+            ]
+          }
+        ]
+      },
+      {
         "discipline": "Brand Management",
         "titles": [
           {
@@ -570,172 +930,6 @@
         ]
       },
       {
-        "discipline": "Communications",
-        "titles": [
-          {
-            "title": "Media Director",
-            "names": [
-              "Hans Abrahamsson",
-              "Vu Bui"
-            ]
-          },
-          {
-            "title": "Director of Communications",
-            "names": [
-              "Emil Rodriguez",
-              "Owen Jones",
-              "Regan O'Leary",
-              "Thomas Wiborgh"
-            ]
-          },
-          {
-            "title": "Communications Managers",
-            "names": [
-              "Addie Coronado",
-              "Adam Martinsson",
-              "Adam Pannel (Assembly Media, Inc)",
-              "Alexis Crofts (Assembly Media, Inc)",
-              "Alli Cohen",
-              "Christian Delgado",
-              "Christopher de Haan (Simplicity Consulting Inc)",
-              "Cristina Anderca",
-              "Cynthia Park (Assembly Media, Inc)",
-              "Elias Arnehall",
-              "Erin Dwyer",
-              "Holly Amber Smith",
-              "Hollis Wacker-Leja",
-              "Jane Billet",
-              "Jessica Xie",
-              "Jessie Steinberg",
-              "John Schork",
-              "Katie Guo (Assembly Media, Inc)",
-              "Maysan Zubi (Assembly Media, Inc)",
-              "Michael Rougeau (Assembly Media, Inc)",
-              "Petra Tell",
-              "Ramona Suris (Assembly Media, Inc)",
-              "Rebecca Gordius",
-              "Richard Chen",
-              "Vanessa Mora",
-              "Wesley Gore (Assembly Media, Inc)",
-              "Zulai Serrano Shimamoto"
-            ]
-          },
-          {
-            "title": "Content Coordinators",
-            "names": [
-              "Andreas Thomasson",
-              "Sara Lempiäinen"
-            ]
-          },
-          {
-            "title": "Creative Writers",
-            "names": [
-              "Emily Richardson",
-              "Julius Olofsson",
-              "Linn Viberg",
-              "Per Landin",
-              "Sophia Austin",
-              "Sophia Dankis"
-            ]
-          },
-          {
-            "title": "Director of Community",
-            "names": [
-              "Nea Aime Rollan"
-            ]
-          },
-          {
-            "title": "Social Media Lead",
-            "names": [
-              "Sean Flanery"
-            ]
-          },
-          {
-            "title": "Social Media Managers",
-            "names": [
-              "Aleksander Gilyadov (Aston Carter Inc)",
-              "Alex Fleck (Adecco)",
-              "Angelica Batth (Kforce, Inc)",
-              "Anthony Toczek",
-              "Cassandra Jones (Cypress Human Capital)",
-              "Chad Oetken (Troy Consulting LLC)",
-              "David Ramos (Collabera, LLC)",
-              "Jeremy Chan (Aerotek, Inc)",
-              "Natascha Cox",
-              "Paulina Espinoza-Gonzalez (Kforce, Inc)",
-              "RJ Lesterio (Ranstad)",
-              "Ross Keatley",
-              "Will Mowery (Harvey Nash, Inc)",
-              "William Chang (Randstad)"
-            ]
-          },
-          {
-            "title": "Community Management Lead",
-            "names": [
-              "Joel Sasaki"
-            ]
-          },
-          {
-            "title": "Community Managers",
-            "names": [
-              "Cameron Thomas",
-              "DèJa Easter (Apex Systems, Inc)",
-              "Emily Hayes (Averro LLC)",
-              "Glory Robinson (Experis)",
-              "Gustav Höglund",
-              "Helen Zbihlyj",
-              "Jay Wells",
-              "Kristina Horner",
-              "Lindsey Schaal",
-              "Matt Gartzke",
-              "Matt Martin",
-              "Michelle Archer Waterman",
-              "Nadine Ebri (Apex Systems, Inc)",
-              "Sophia Lyon",
-              "Trella Rath (Corestaff)"
-            ]
-          },
-          {
-            "title": "Content Managers",
-            "names": [
-              "John Hansen (Insight Global, Inc)",
-              "Nadja Anderberg",
-              "Niclas Fredriksson",
-              "Oskar Thysell",
-              "Reagan Sterner (Apex Systems, Inc)"
-            ]
-          },
-          {
-            "title": "Publishing Editor",
-            "names": [
-              "Jay Castello",
-              "Lauren Marklund",
-              "Marsh Davies",
-              "Tom Stone"
-            ]
-          },
-          {
-            "title": "Chief Storyteller",
-            "names": [
-              "Lydia Winters"
-            ]
-          },
-          {
-            "title": "Lead Web Developer",
-            "names": [
-              "Mark Jawad"
-            ]
-          },
-          {
-            "title": "Web Designers",
-            "names": [
-              "Paul Madlon (Ten Gun Design, Inc)",
-              "Taylor Kasony (eXcell, a division of CompuCom)"
-            ]
-          }
-        ]
-      },
-      {
         "discipline": "Data Analytics",
         "titles": [
           {
@@ -856,200 +1050,6 @@
               "Olusola Timothy Olojede",
               "Patrick Worthey",
               "Sachin Dekate"
-            ]
-          }
-        ]
-      },
-      {
-        "discipline": "Design",
-        "titles": [
-          {
-            "title": "Game Director, Minecraft",
-            "names": [
-              "Agnes Larsson",
-              "Henrik Pettersson"
-            ]
-          },
-          {
-            "title": "Creative Director, Brand",
-            "names": [
-              "Markus Toivonen"
-            ]
-          },
-          {
-            "title": "Creative Director",
-            "names": [
-              "John Hendricks",
-              "John Yamamoto"
-            ]
-          },
-          {
-            "title": "Creative Directors, Games",
-            "names": [
-              "Craig Leigh",
-              "Magnus Nedfors",
-              "Måns Olson"
-            ]
-          },
-          {
-            "title": "Creative Director, Entertainment",
-            "names": [
-              "Torfi Frans Ólafsson"
-            ]
-          },
-          {
-            "title": "Creative Managers",
-            "names": [
-              "Alex Macleod",
-              "Jesse Merriam",
-              "Louise Smith (Formosa)",
-              "Michael Harnisch",
-              "Rasmus Eriksson",
-              "Samir Belarbi"
-            ]
-          },
-          {
-            "title": "Design Directors",
-            "names": [
-              "Antti Meriluoto",
-              "Laura de Llorens Garcia",
-              "Orvar Halldorsson"
-            ]
-          },
-          {
-            "title": "Design Managers",
-            "names": [
-              "Art Usher",
-              "Jesper Staafjord",
-              "Oskar Hansson Wettergren",
-              "Peter Diar Friman",
-              "Rabi Afram",
-              "Robin Hedin"
-            ]
-          },
-          {
-            "title": "Lead Game Designers",
-            "names": [
-              "Cory Scheviak",
-              "Daniel Jansson",
-              "Guillaume Mroz",
-              "Matthew Gatland",
-              "Nickole Li",
-              "Rob Poerschke",
-              "Robin V Vincent",
-              "Uladzislau Charnaus"
-            ]
-          },
-          {
-            "title": "Game Designers",
-            "names": [
-              "Brandon Franklin (Insight Global, Inc)",
-              "Brandon Pearce",
-              "Christian Berg",
-              "Colten Murphy (TEKsystems, Inc.)",
-              "Colton Phillips",
-              "Dana Lee (Insight Global, Inc)",
-              "Daniel Brynolf",
-              "Giuseppe Libonati (Insight Global, Inc)",
-              "H Jones",
-              "Henrik Kniberg",
-              "Jared Greiner",
-              "Jesse A Hibbs (TEKsystems, Inc.)",
-              "Jesper Westlund",
-              "Justice Mealer (Insight Global, Inc)",
-              "Katherine Durkin (Insight Global, Inc)",
-              "Kelsey Howard",
-              "Kyle Wood (Insight Global, Inc)",
-              "Mark Anthony Esparagoza (Insight Global, Inc)",
-              "Melissa Andrews (Insight Global, Inc)",
-              "Michael Söderqvist",
-              "Michael Stagnitta",
-              "Miko Charbonneau",
-              "Nikolaj Kledzik",
-              "Nir Vaknin",
-              "Pontus Hammarberg",
-              "Pradnesh Patil",
-              "Steve Enos",
-              "Tate Sliwa (Insight Global, Inc)",
-              "Tod Pang"
-            ]
-          },
-          {
-            "title": "Narrative Director",
-            "names": [
-              "Kevin Grace"
-            ]
-          },
-          {
-            "title": "Narrative Director, Entertainment",
-            "names": [
-              "Alex Wiltshire"
-            ]
-          },
-          {
-            "title": "Narrative Designer",
-            "names": [
-              "Max Herngren"
-            ]
-          },
-          {
-            "title": "User Experience Design Directors",
-            "names": [
-              "Anna Wendelin",
-              "Carlos Lidón",
-              "Stephen Whetstine",
-              "Tobias Ahlin"
-            ]
-          },
-          {
-            "title": "User Experience Design Leads",
-            "names": [
-              "Josefine Lindqvist",
-              "Unn Swanström"
-            ]
-          },
-          {
-            "title": "User Experience Designers",
-            "names": [
-              "Aksel Englund",
-              "Alejandra Ricciardi (Globant)",
-              "Clory Luo (Formosa)",
-              "Connor Tompsett (CompuCom Systems, Inc)",
-              "Eric Alm",
-              "Gaby Salinas",
-              "Hajar Harda",
-              "Imani Ricks",
-              "Jem Alexander",
-              "Jin Shin",
-              "Jonathan Paton Gallina",
-              "Kailin Li (TEKsystems, Inc.)",
-              "Karolin Pettersson",
-              "Lily Ekman",
-              "Lucas Morales Sousa",
-              "Margot Laucournet",
-              "Melissa Kay (Prieto)",
-              "Nirali Vadera (Ascendion, Inc)",
-              "Oscar Nilsson",
-              "Sabrina Cuevas-Pagoaga (Randstad)",
-              "Sam Paye (Aquent, LLC)",
-              "Sandra Bornemark",
-              "Sarah Mack (Digital Intelligence Systems, LLC)",
-              "Sebastian Melchor Hedman",
-              "Shaun Basil Mendonsa",
-              "Tom Keen",
-              "William Hollowell"
-            ]
-          },
-          {
-            "title": "User Experience Writer",
-            "names": [
-              "Juan Buis"
-            ]
-          },
-          {
-            "title": "User Experience Intern",
-            "names": [
-              "Axel Grefberg"
             ]
           }
         ]
