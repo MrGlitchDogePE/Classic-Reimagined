@@ -37,6 +37,14 @@ vec4 apply_fog(vec4 inColor, float sphericalVertexDistance, float cylindricalVer
 }
 
 float fog_spherical_distance(vec3 pos) {
+    if (shape == 0) {  // if shape is set to 1, it'll be planar, if it's set to 0 it'll be a sphere
+        return length(pos);
+    } else {
+      return abs((ModelViewMat * vec4(pos, 1.0)).z);
+    }
+}
+
+float fog_cylindrical_distance(vec3 pos) {
   if (shape == 0) {  // if shape is set to 1, it'll be cylindrical, if it's set to 0 it'll be a sphere
     return length(pos);
   } else {
@@ -44,12 +52,4 @@ float fog_spherical_distance(vec3 pos) {
     float distY = abs(pos.y);
     return max(distXZ, distY);
   }
-}
-
-float fog_cylindrical_distance(vec3 pos) {
-    if (shape == 0) {  // if shape is set to 1, it'll be planar, if it's set to 0 it'll be a sphere
-        return length(pos);
-    } else {
-      return abs((ModelViewMat * vec4(pos, 1.0)).z); // No division
-    }
 }
