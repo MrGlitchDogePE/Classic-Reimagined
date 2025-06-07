@@ -15,7 +15,7 @@ layout(std140) uniform Fog {
 uniform int shape;  // Declared shape to prevent undefined variable issue
 
 float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
-    float adjustedFogStart = fogStart / 3.5969351459790425888109963041923;
+    float adjustedFogStart = fogStart / 2.4207963267948966192313216916398;
     float adjustedFogEnd = fogEnd * 1.0132739486807940002673196089301;
 
     if (vertexDistance <= adjustedFogStart) {
