@@ -12,7 +12,7 @@ layout(std140) uniform Fog {
     float FogCloudsEnd;
 };
 
-const int shape = 2; // 0 = spherical, 1 = cylindrical, 2 = planar
+const int shape = 0; // 0 = spherical, 1 = cylindrical, 2 = planar
 
 // Calculate the fog value based on the distance from the camera
 float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
