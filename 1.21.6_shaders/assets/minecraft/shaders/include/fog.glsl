@@ -1,11 +1,8 @@
 // code by MrGlitchDogePE
 // OpenGL Shading Language (GLSL) code for Minecraft shaders
 // This code runs with OpenGL version 4.6
-
 #version 460
-
 #moj_import <dynamictransforms.glsl>
-
 layout(std140) uniform Fog {
     vec4 FogColor;
     float FogEnvironmentalStart;
@@ -15,21 +12,16 @@ layout(std140) uniform Fog {
     float FogSkyEnd;
     float FogCloudsEnd;
 };
-
 const int shape = 0; // 0 = spherical, 1 = cylindrical, 2 = planar
-
 // Calculate the fog value based on the distance from the camera
 float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
-    float adjustedFogStart = fogStart / (355/113);
-    float adjustedFogEnd = fogEnd * 1.0132739486807940002673196089301;
-
-    if (vertexDistance <= adjustedFogStart) {
-        return 0.0;
+  float adjustedFogStart = fogStart / (355/113);
+  float adjustedFogEnd = fogEnd * 1.02;
+  if (vertexDistance <= adjustedFogStart) {
+    return 0.0;
     } else if (vertexDistance >= adjustedFogEnd) {
-        return 1.0;
-    }
-
-    return (vertexDistance - adjustedFogStart) / (adjustedFogEnd - adjustedFogStart);
+      return 1.0;
+      } return (vertexDistance - adjustedFogStart) / (adjustedFogEnd - adjustedFogStart);
 }
 
 float total_fog_value(float sphericalVertexDistance, float cylindricalVertexDistance, float environmentalStart, float environmantalEnd, float renderDistanceStart, float renderDistanceEnd) {
