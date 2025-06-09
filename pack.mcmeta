@@ -94,7 +94,7 @@
       },
       {
         "formats": [
-          60,
+          63,
           2147483647
         ],
         "directory": "v10.0.7_MrGlitchDogePE.Classic_Reimagined_10_SE_2"
@@ -108,7 +108,7 @@
     },
     "pack_format": 18,
     "description": {
-      "text": "By §2MrGlitchDogePE§r§f§r for\n§a1.20+§r §e(Polytone Required) §f§r"
+      "text": "By §2MrGlitchDogePE§r§f§r for\n§a1.20.2+§r §e(Polytone Required) §f§r"
     }
   }
 }
