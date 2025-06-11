@@ -24,7 +24,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#moj_import <fog_translucent.glsl>
+#moj_import <fog.glsl>
 
 #define MC_CLOUD_VERSION 12102
 
