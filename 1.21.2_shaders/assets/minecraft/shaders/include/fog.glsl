@@ -27,10 +27,6 @@ vec4 apply_fog(vec4 inColor, float sphericalVertexDistance, float cylindricalVer
     float fogValue = total_fog_value(sphericalVertexDistance, cylindricalVertexDistance, environmentalStart, environmantalEnd, renderDistanceStart, renderDistanceEnd);
     return vec4(mix(inColor.rgb, fogColor.rgb, fogValue * fogColor.a), inColor.a);
 }
-
-float fog_cylindrical_distance(vec3 pos) {
-    return length(pos.xz);
-}
 float fog_spherical_distance(vec3 pos) {
     return length(pos);
 }
