@@ -46,6 +46,13 @@
       {
         "formats": [
           15,
+          22
+        ],
+        "directory": "legacy_lightmap"
+      },
+      {
+        "formats": [
+          15,
           2147483647
         ],
         "directory": "v7.12.3_MrGlitchDogePE._Better_Default_7"
