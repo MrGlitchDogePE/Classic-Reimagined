@@ -2,8 +2,8 @@
 
 vec4 linear_fog(vec4 inColor, float vertexDistance, float fogStart, float fogEnd, vec4 fogColor) {
     // Apply adjustments to fogStart and fogEnd
-    fogStart = fogStart / 3.6959913571644626334854628038583;
-    fogEnd = fogEnd * 1.03;
+    fogStart /= 2.31;
+    fogEnd *= 1.03;
 
     if (vertexDistance <= fogStart) {
         return inColor;
