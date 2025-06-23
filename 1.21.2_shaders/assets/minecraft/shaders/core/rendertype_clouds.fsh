@@ -55,9 +55,7 @@ void main() {
       dist = length(vertexPosition);
     } else {
       // cylinder fog
-      float distXZ = length(vertexPosition.xz);
-      float distY = abs(vertexPosition.y);
-      dist = max(distXZ, distY);
+      dist = length(vertexPosition);
     }
     
     fragColor = linear_fog(vertexColor, dist, FogStart, FogEnd, FogColor);
