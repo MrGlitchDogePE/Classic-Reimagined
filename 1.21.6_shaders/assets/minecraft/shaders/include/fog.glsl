@@ -54,6 +54,18 @@ float fog_spherical_distance(vec3 pos) {
   return length(pos);
 }
 
+float fog_planar_distance(vec3 pos) {
+    return abs((ModelViewMat * vec4(pos, 1.0)).z);
+}
+
+float fog_dithering_distance(vec3 pos) {
+    // Dithering distance calculation based on the position
+    float ditherScale = 0.1; // Adjust this value for desired dithering effect
+    vec2 ditherCoord = mod(pos.xz * ditherScale, 1.0);
+    float ditherValue = fract(sin(dot(ditherCoord, vec2(12.9898, 78.233))) * 43758.5453);
+    return ditherValue;
+}
+
 float fog_sky(vec3 pos) {
     vec3 color1 = vec3(1.0, 0.588, 0.294);   // #FF964B
     vec3 color2 = vec3(0.784, 0.314, 0.196); // #C85032
@@ -66,7 +78,9 @@ float fog_sky(vec3 pos) {
         distance(FogColor.rgb, color3) < tolerance ||
         distance(FogColor.rgb, color4) < tolerance
     ) {
-        return abs((ModelViewMat * vec4(pos, 1.0)).z);
+      float distXZ = length(pos.xz);
+      float distY = abs(pos.y);
+      return max(distXZ, distY);
     }
     return length(pos);
 }
