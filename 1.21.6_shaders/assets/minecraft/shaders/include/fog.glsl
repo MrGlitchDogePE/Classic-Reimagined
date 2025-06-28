@@ -37,19 +37,36 @@ vec4 apply_fog(vec4 inColor, float sphericalVertexDistance, float cylindricalVer
 // Terrain shape is fog_cylindrical_distance
 float fog_cylindrical_distance(vec3 pos) {
   if (shape == 0) {
-    // Spherical fog distance
+    // Spherical fog distance calculation
     return length(pos);
     } else if (shape == 1) {
-      // Cylindrical fog distance
+      // Cylindrical fog distance calculation
       float distXZ = length(pos.xz);
       float distY = abs(pos.y);
       return max(distXZ, distY);
       } else if (shape == 2) {
-        // Planar fog distance
+        // Planar fog distance calculation
         return abs((ModelViewMat * vec4(pos, 1.0)).z);
         }
 }
 
 float fog_spherical_distance(vec3 pos) {
   return length(pos);
+}
+
+float fog_sky(vec3 pos) {
+    vec3 color1 = vec3(1.0, 0.588, 0.294);   // #FF964B
+    vec3 color2 = vec3(0.784, 0.314, 0.196); // #C85032
+    vec3 color3 = vec3(0.5, 0.176, 0.176); // #7D2D2D
+    vec3 color4 = vec3(0.78, 0.66, 0.5); // #C9AA88
+    float tolerance = 0.4;
+    if (
+        distance(FogColor.rgb, color1) < tolerance ||
+        distance(FogColor.rgb, color2) < tolerance ||
+        distance(FogColor.rgb, color3) < tolerance ||
+        distance(FogColor.rgb, color4) < tolerance
+    ) {
+        return abs((ModelViewMat * vec4(pos, 1.0)).z);
+    }
+    return length(pos);
 }
