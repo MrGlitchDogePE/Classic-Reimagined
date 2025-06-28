@@ -7,11 +7,9 @@
 in vec3 Position;
 
 out float cylindricalVertexDistance;
-out float sphericalVertexDistance;
 
 void main() {
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
 
     cylindricalVertexDistance = fog_sky(Position);
-    sphericalVertexDistance = fog_planar_distance(Position);
 }
