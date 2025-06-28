@@ -15,8 +15,8 @@ layout(std140) uniform Fog {
 const int shape = 0; // 0 = spherical, 1 = cylindrical, 2 = planar
 // Calculate the fog value based on the distance from the camera
 float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
-  float adjustedFogStart = fogStart / 2.6703537555513242526932468757876; // cut-off distance for fog start is 0.85
-  float adjustedFogEnd = fogEnd * 1.02;
+  float adjustedFogStart = fogStart / 2.31; // cut-off distance for fog start is 0.85
+  float adjustedFogEnd = fogEnd * 1.03;
   if (vertexDistance <= adjustedFogStart) {
     return 0.0;
     } else if (vertexDistance >= adjustedFogEnd) {
@@ -36,23 +36,20 @@ vec4 apply_fog(vec4 inColor, float sphericalVertexDistance, float cylindricalVer
 // Calculate the distance for fog based on the shape
 // Terrain shape is fog_cylindrical_distance
 float fog_cylindrical_distance(vec3 pos) {
-    if (shape == 0) {
-      // Default shape
-      // Use the spherical distance formula
-      return length(pos);
+  if (shape == 0) {
+    // Spherical fog distance
+    return length(pos);
     } else if (shape == 1) {
-      // Cylindrical distance
-      // Calculate the cylindrical distance based on the XZ plane and Y axis
+      // Cylindrical fog distance
       float distXZ = length(pos.xz);
       float distY = abs(pos.y);
       return max(distXZ, distY);
-    } else if (shape == 2) {
-      // planar distance
-      // Calculate the planar distance based on the XZ plane
-      return abs((ModelViewMat * vec4(pos, 1.0)).z);
-    }
+      } else if (shape == 2) {
+        // Planar fog distance
+        return abs((ModelViewMat * vec4(pos, 1.0)).z);
+        }
 }
 
 float fog_spherical_distance(vec3 pos) {
   return length(pos);
-  }
+}
