@@ -53,13 +53,3 @@ float fog_cylindrical_distance(vec3 pos) {
 float fog_spherical_distance(vec3 pos) {
   return length(pos);
 }
-
-float fog_planar_distance(vec3 pos) {
-    return abs((ModelViewMat * vec4(pos, 1.0)).z);
-}
-
-float fog_sky(vec3 pos) {
-  float distXZ = length(pos.xz);
-  float distY = abs(pos.y);
-  return max(distXZ, distY);
-}
