@@ -1,4 +1,4 @@
-#version 150
+#version 460
 
 uniform float AmbientLightFactor;
 uniform float SkyFactor;
