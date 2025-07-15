@@ -76,35 +76,35 @@
           32,
           2147483647
         ],
-        "directory": "v10.0.1_MrGlitchDogePE.Classic_Reimagined_10"
+        "directory": "v10.0.01_MrGlitchDogePE.Classic_Reimagined_10"
       },
       {
         "formats": [
           42,
           2147483647
         ],
-        "directory": "v10.0.2_MrGlitchDogePE.Classic_Reimagined_10s"
+        "directory": "v10.0.02_MrGlitchDogePE.Classic_Reimagined_10s"
       },
       {
         "formats": [
           46,
           2147483647
         ],
-        "directory": "v10.0.3_MrGlitchDogePE.Classic_Reimagined_10_SE"
+        "directory": "v10.0.03_MrGlitchDogePE.Classic_Reimagined_10_SE"
       },
       {
         "formats": [
           55,
           2147483647
         ],
-        "directory": "v10.0.4_MrGlitchDogePE.Classic_Reimagined_10_SE_2"
+        "directory": "v10.0.04_MrGlitchDogePE.Classic_Reimagined_10_SE_2"
       },
       {
         "formats": [
           63,
           2147483647
         ],
-        "directory": "v10.0.7_MrGlitchDogePE.Classic_Reimagined_10_SE_2"
+        "directory": "v10.0.07_MrGlitchDogePE.Classic_Reimagined_10_SE_2"
       }
     ]
   },
