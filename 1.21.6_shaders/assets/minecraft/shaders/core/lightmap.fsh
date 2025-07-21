@@ -13,21 +13,21 @@ layout(std140) uniform LightmapInfo {
 } lightmapInfo;
 
 const float[] BETA_LIGHT = float[](
-    0.0434389140271494,
+    0.0470588235294118,
     0.0627450980392157,
     0.0823529411764706,
     0.1019607843137255,
     0.1254901960784314,
-    0.1529411764705882, 
+    0.1529411764705882,
     0.1843137254901961,
     0.2196078431372549,
     0.2588235294117647,
     0.3058823529411765,
-    0.3647058823529412, 
+    0.3647058823529412,
     0.4352941176470588,
     0.5215686274509804,
     0.6352941176470588,
-    0.7843331391962726,
+    0.7882352941176471,
     1.0
 );
 
@@ -50,5 +50,5 @@ void main() {
     int sky_light = clamp(spread(texCoord.y, 15), 0, 15);
 
     float light = max(BETA_LIGHT[block_light], BETA_LIGHT[sky_light - sky_factor]);
-    fragColor = vec4(vec3(clamp(light - lightmapInfo.DarknessScale * 0.7, 0.05, 1)), 1.0);
+    fragColor = vec4(vec3(clamp(light - lightmapInfo.DarknessScale * 0.0, 0.00, 1)), 1.0);
 }
