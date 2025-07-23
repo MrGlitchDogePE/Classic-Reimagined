@@ -126,6 +126,6 @@ void main() {
     vec3 pos = (faceVertex * CellSize) + (vec3(cellX, 0, cellZ) * CellSize) + CloudOffset - vec3(0, VANILLA_CLOUD_HEIGHT - CLOUD_HEIGHT, 0);
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
 
-    vertexDistance = fog_cylindrical_distance(pos);
+    vertexDistance = fog_spherical_distance(pos);
     vertexColor = (useTopColor ? faceColors[1] : faceColors[direction]) * CloudColor;
 }
