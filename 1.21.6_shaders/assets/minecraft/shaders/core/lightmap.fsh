@@ -50,5 +50,10 @@ void main() {
     int sky_light = clamp(spread(texCoord.y, 15), 0, 15);
 
     float light = max(BETA_LIGHT[block_light], BETA_LIGHT[sky_light - sky_factor]);
+
+    // Moody = 1.0, Bright = 5.0/3.0, interpolate between
+    float brightnessScale = mix(1.0, 5.0/3.0, clamp(lightmapInfo.BrightnessFactor, 0.0, 1.0));
+    light *= brightnessScale;
+
     fragColor = vec4(vec3(clamp(light - lightmapInfo.DarknessScale * 0.0, 0.00, 1)), 1.0);
 }
