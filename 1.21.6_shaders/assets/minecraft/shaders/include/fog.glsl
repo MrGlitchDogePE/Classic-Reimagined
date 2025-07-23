@@ -12,7 +12,7 @@ layout(std140) uniform Fog {
     float FogSkyEnd;
     float FogCloudsEnd;
 };
-const int shape = 0; // 0 = spherical, 1 = cylindrical, 2 = planar
+const int shape = 3; // 0 = spherical, 1 = cylindrical, 2 = planar
 // Calculate the fog value based on the distance from the camera
 float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
   float adjustedFogStart = fogStart / 2.31; // cut-off distance for fog start is 0.85
@@ -47,6 +47,9 @@ float fog_cylindrical_distance(vec3 pos) {
       } else if (shape == 2) {
         // Planar fog distance calculation
         return abs((ModelViewMat * vec4(pos, 1.0)).z);
+        } else if (shape == 3) {
+          // rotating sphere (Extra)
+          return length((ModelViewMat * vec4(pos, 1.0)));
         }
 }
 
