@@ -12,7 +12,7 @@ layout(std140) uniform LightmapInfo {
     vec3 SkyLightColor;
 } lightmapInfo;
 
-const float[] BETA_LIGHT = float[](
+const float BETA_LIGHT[16] = float[](
     0.0470588235294118,
     0.0627450980392157,
     0.0823529411764706,
@@ -32,23 +32,34 @@ const float[] BETA_LIGHT = float[](
 );
 
 in vec2 texCoord;
-
 out vec4 fragColor;
 
 int spread(float f, int x) {
-    return clamp(int(floor(f * (float(x) + 1.0))), 0, x);
+    return clamp(int(floor(f * float(x + 1))), 0, x);
 }
 
 void main() {
+    int block_light = spread(texCoord.x, 15);
+    int sky_light = spread(texCoord.y, 15);
+    int sky_factor = clamp(spread(1.0 - lightmapInfo.SkyFactor, 15), 0, 11);
+
+    // Subtract sky_factor from sky_light and clamp the result
+    int adjusted_sky = clamp(sky_light - sky_factor, 0, 15);
+
+    // Use the higher value between block light and adjusted sky light
+    int final_index = max(block_light, adjusted_sky);
+    float light_factor = BETA_LIGHT[final_index];
+
+    vec3 color = vec3(light_factor);
+
+    // Apply night vision enhancement
     if (lightmapInfo.NightVisionFactor > 0.0) {
-        fragColor = vec4(vec3(1.0), 1.0);
-        return;
+        float max_comp = max(color.r, max(color.g, color.b));
+        if (max_comp < 1.0) {
+            vec3 boosted = color / max_comp;
+            color = mix(color, boosted, lightmapInfo.NightVisionFactor);
+        }
     }
 
-    int block_light = spread(texCoord.x, 15);
-    int sky_factor = clamp(spread(1.0 - lightmapInfo.SkyFactor, 15), 0, 11);
-    int sky_light = clamp(spread(texCoord.y, 15), 0, 15);
-
-    float light = max(BETA_LIGHT[block_light], BETA_LIGHT[sky_light - sky_factor]);
-    fragColor = vec4(vec3(clamp(light - lightmapInfo.DarknessScale * 0.0, 0.00, 1)), 1.0);
+    fragColor = vec4(color, 1.0);
 }
