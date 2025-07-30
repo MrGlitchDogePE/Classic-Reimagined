@@ -57,7 +57,7 @@ float fog_spherical_distance(vec3 pos) {
   return length((ModelViewMat * vec4(pos, 1.0)));
 }
 
-float fog_experimental_distance(vec3 pos) {
+float fog_planar_distance(vec3 pos) {
   // Experimental fog distance calculation
-  return max(abs((ModelViewMat * vec4(pos, 1.0)).z), length(pos.zx));
+  return abs((ModelViewMat * vec4(pos, 1.0)).z);
 }
