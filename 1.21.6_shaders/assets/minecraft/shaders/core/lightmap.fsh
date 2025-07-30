@@ -51,7 +51,7 @@ void main() {
     float light_factor = BETA_LIGHT[final_index];
 
     vec3 color = vec3(light_factor);
-    color *= (1.0 + (lightmapInfo.BrightnessFactor));
+    color *= (1.0 + (3 * lightmapInfo.BrightnessFactor));
 
     // Apply night vision enhancement
     if (lightmapInfo.NightVisionFactor > 0.0) {
