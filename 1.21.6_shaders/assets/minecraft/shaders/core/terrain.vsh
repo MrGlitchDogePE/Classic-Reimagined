@@ -17,20 +17,20 @@ out float cylindricalVertexDistance;
 out vec4 vertexColor;
 out vec2 texCoord0;
 
-// Returns normalized and texel-centered lightmap UV
 vec2 get_lightmap_uv(ivec2 uv) {
-    vec2 normalized = vec2(uv) / 256.0;
-    return clamp((floor(normalized * 16.0) + 0.5) / 16.0, vec2(0.0), vec2(1.0));
+    return clamp(((vec2(uv) * 0.0625) + 0.5) * 0.0625, 0.0, 1.0);
 }
 
 void main() {
     vec3 pos = Position + ModelOffset;
-    vec4 worldPos = vec4(pos, 1.0);
 
-    gl_Position = ProjMat * ModelViewMat * worldPos;
+    // Compute once and reuse everywhere
+    gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
 
     sphericalVertexDistance = fog_spherical_distance(pos);
     cylindricalVertexDistance = fog_cylindrical_distance(pos);
+
+    // Avoid multiple texture samples and unnecessary color math
     vertexColor = Color * texture(Sampler2, get_lightmap_uv(UV2));
     texCoord0 = UV0;
 }
