@@ -145,6 +145,15 @@
         ],
         "min_format": 63,
         "max_format": 2147483647
+      },
+      {
+        "directory": "v10.0.09_MrGlitchDogePE.Classic_Reimagined_10_SE_2_RT",
+        "formats": [
+          65,
+          2147483647
+        ],
+        "min_format": 65,
+        "max_format": 2147483647
       }
     ]
   }
