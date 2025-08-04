@@ -21,7 +21,7 @@
         "max_format": 22
       },
       {
-        "directory": "1.20.0_shaders",
+        "directory": "1.21.0_shaders",
         "formats": [
           32,
           34
@@ -45,114 +45,6 @@
           2147483647
         ],
         "min_format": 63,
-        "max_format": 2147483647
-      },
-      {
-        "directory": "Hexy_GUI",
-        "formats": [
-          18,
-          2147483647
-        ],
-        "min_format": 18,
-        "max_format": 2147483647
-      },
-      {
-        "directory": "Beta_Continuum_fork.MGDPE_build_9650",
-        "formats": [
-          18,
-          2147483647
-        ],
-        "min_format": 18,
-        "max_format": 2147483647
-      },
-      {
-        "directory": "legacy_lightmap",
-        "formats": [
-          18,
-          34
-        ],
-        "min_format": 18,
-        "max_format": 34
-      },
-      {
-        "directory": "v7.12.3_MrGlitchDogePE._Better_Default_7",
-        "formats": [
-          18,
-          2147483647
-        ],
-        "min_format": 18,
-        "max_format": 2147483647
-      },
-      {
-        "directory": "v8.10.31_MrGlitchDogePE.Classic_Reimagined_8",
-        "formats": [
-          18,
-          2147483647
-        ],
-        "min_format": 18,
-        "max_format": 2147483647
-      },
-      {
-        "directory": "v8.10.32_MrGlitchDogePE.Classic_Reimagined_8",
-        "formats": [
-          22,
-          2147483647
-        ],
-        "min_format": 22,
-        "max_format": 2147483647
-      },
-      {
-        "directory": "v10.0.01_MrGlitchDogePE.Classic_Reimagined_10",
-        "formats": [
-          32,
-          2147483647
-        ],
-        "min_format": 32,
-        "max_format": 2147483647
-      },
-      {
-        "directory": "v10.0.02_MrGlitchDogePE.Classic_Reimagined_10s",
-        "formats": [
-          42,
-          2147483647
-        ],
-        "min_format": 42,
-        "max_format": 2147483647
-      },
-      {
-        "directory": "v10.0.03_MrGlitchDogePE.Classic_Reimagined_10_SE",
-        "formats": [
-          46,
-          2147483647
-        ],
-        "min_format": 46,
-        "max_format": 2147483647
-      },
-      {
-        "directory": "v10.0.04_MrGlitchDogePE.Classic_Reimagined_10_SE_2",
-        "formats": [
-          55,
-          2147483647
-        ],
-        "min_format": 55,
-        "max_format": 2147483647
-      },
-      {
-        "directory": "v10.0.07_MrGlitchDogePE.Classic_Reimagined_10_SE_2",
-        "formats": [
-          63,
-          2147483647
-        ],
-        "min_format": 63,
-        "max_format": 2147483647
-      },
-      {
-        "directory": "v10.0.09_MrGlitchDogePE.Classic_Reimagined_10_SE_2_RT",
-        "formats": [
-          65,
-          2147483647
-        ],
-        "min_format": 65,
         "max_format": 2147483647
       }
     ]
