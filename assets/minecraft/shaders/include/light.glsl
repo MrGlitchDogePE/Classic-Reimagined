@@ -21,5 +21,5 @@ vec4 minecraft_sample_lightmap(sampler2D lightMap, ivec2 uv) {
     vec2 snapped = (floor(normalized * GRID_RES) + 0.5) / GRID_RES;
 
     // Clamp to prevent out-of-bounds sampling (especially near edges)
-    return texture(lightMap, clamp(snapped, vec2(0.0), vec2(1.0)))*1.011904761904762;
+    return texture(lightMap, clamp(snapped, vec2(0.0), vec2(1.0)));
 }

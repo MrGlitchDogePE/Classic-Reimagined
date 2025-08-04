@@ -2,7 +2,7 @@
   "pack": {
     "pack_format": 15,
     "supported_formats": [
-      18,
+      15,
       2147483647
     ],
     "min_format": 18,
