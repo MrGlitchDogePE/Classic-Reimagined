@@ -1,8 +1,8 @@
 {
   "pack": {
-    "pack_format": 15,
+    "pack_format": 18,
     "supported_formats": [
-      15,
+      18,
       2147483647
     ],
     "min_format": 18,
