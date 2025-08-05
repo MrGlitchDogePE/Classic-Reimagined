@@ -46,6 +46,78 @@
         ],
         "min_format": 63,
         "max_format": 2147483647
+      },
+      {
+        "directory": "v8.10.31-1.20.2",
+        "formats": [
+          18,
+          2147483647
+        ],
+        "min_format": 18,
+        "max_format": 2147483647
+      },
+      {
+        "directory": "v8.10.32-1.20.3",
+        "formats": [
+          22,
+          2147483647
+        ],
+        "min_format": 22,
+        "max_format": 2147483647
+      },
+      {
+        "directory": "v10.0.01-1.20.5",
+        "formats": [
+          32,
+          2147483647
+        ],
+        "min_format": 32,
+        "max_format": 2147483647
+      },
+      {
+        "directory": "v10.0.02-1.21.2",
+        "formats": [
+          42,
+          2147483647
+        ],
+        "min_format": 42,
+        "max_format": 2147483647
+      },
+      {
+        "directory": "v10.0.03-1.21.4",
+        "formats": [
+          46,
+          2147483647
+        ],
+        "min_format": 46,
+        "max_format": 2147483647
+      },
+      {
+        "directory": "v10.0.04-1.21.5",
+        "formats": [
+          55,
+          2147483647
+        ],
+        "min_format": 55,
+        "max_format": 2147483647
+      },
+      {
+        "directory": "v10.0.07-1.21.6",
+        "formats": [
+          63,
+          2147483647
+        ],
+        "min_format": 63,
+        "max_format": 2147483647
+      },
+      {
+        "directory": "v10.0.09-1.21.9",
+        "formats": [
+          65,
+          2147483647
+        ],
+        "min_format": 65,
+        "max_format": 2147483647
       }
     ]
   }
