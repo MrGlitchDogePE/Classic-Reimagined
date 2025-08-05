@@ -48,6 +48,15 @@
         "max_format": 2147483647
       },
       {
+        "directory": "mc-1.13a",
+        "formats": [
+          18,
+          2147483647
+        ],
+        "min_format": 18,
+        "max_format": 2147483647
+      },
+      {
         "directory": "v7.12.3rt-1.20",
         "formats": [
           18,
