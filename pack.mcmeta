@@ -12,6 +12,15 @@
   "overlays": {
     "entries": [
       {
+        "directory": "legacy_lighting",
+        "formats": [
+          18,
+          55
+        ],
+        "min_format": 18,
+        "max_format": 34
+      },
+      {
         "directory": "1.20.0_shaders",
         "formats": [
           18,
