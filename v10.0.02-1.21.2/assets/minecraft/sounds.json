@@ -866,6 +866,35 @@
       }
     ]
   },
+  "block.creaking_heart.fall": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.creaking_heart.place",
+        "type": "event"
+      }
+    ]
+  },
+  "block.creaking_heart.hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.creaking_heart.place",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.creaking_heart.step": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.creaking_heart.place",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
   "block.crop.break": {
     "replace": true,
     "sounds": [

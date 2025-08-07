@@ -1233,6 +1233,69 @@
     ],
     "subtitle": "subtitles.block.generic.footsteps"
   },
+  "block.metal.break": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.stone.break",
+        "type": "event"
+      }
+    ]
+  },
+  "block.metal.fall": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.stone.break",
+        "type": "event"
+      }
+    ]
+  },
+  "block.metal.hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.stone.break",
+        "type": "event"
+      }
+    ]
+  },
+  "block.metal.place": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.stone.break",
+        "type": "event"
+      }
+    ]
+  },
+  "block.metal.step": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.stone.break",
+        "type": "event"
+      }
+    ]
+  },
+  "block.metal_pressure_plate.click_off": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.stone_button.click_off",
+        "type": "event"
+      }
+    ]
+  },
+  "block.metal_pressure_plate.click_on": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.stone_button.click_on",
+        "type": "event"
+      }
+    ]
+  },
   "block.moss.break": {
     "replace": true,
     "sounds": [
