@@ -1,73 +1,4 @@
 {
-  "item.crop.plant": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "block.grass.break",
-        "type": "event"
-      }
-    ],
-    "subtitle": "subtitles.block.generic.place"
-  },
-  "block.crop.break": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "block.grass.break",
-        "type": "event"
-      }
-    ],
-    "subtitle": "subtitles.block.generic.break"
-  },
-  "block.wet_grass.break": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "block.grass.break",
-        "type": "event"
-      }
-    ],
-    "subtitle": "subtitles.block.generic.break"
-  },
-  "block.wet_grass.fall": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "block.grass.break",
-        "type": "event"
-      }
-    ]
-  },
-  "block.wet_grass.hit": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "block.grass.break",
-        "type": "event"
-      }
-    ],
-    "subtitle": "subtitles.block.generic.hit"
-  },
-  "block.wet_grass.place": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "block.grass.break",
-        "type": "event"
-      }
-    ],
-    "subtitle": "subtitles.block.generic.place"
-  },
-  "block.wet_grass.step": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "block.grass.break",
-        "type": "event"
-      }
-    ],
-    "subtitle": "subtitles.block.generic.footsteps"
-  },
   "ambient.underwater.enter": {
     "replace": true,
     "sounds": []
@@ -778,6 +709,16 @@
         "type": "event"
       }
     ]
+  },
+  "block.crop.break": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.grass.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.break"
   },
   "block.deepslate.break": {
     "replace": true,
@@ -2628,6 +2569,55 @@
     "sounds": [],
     "subtitle": "subtitles.block.water.ambient"
   },
+  "block.wet_grass.break": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.grass.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.wet_grass.fall": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.grass.break",
+        "type": "event"
+      }
+    ]
+  },
+  "block.wet_grass.hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.grass.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.wet_grass.place": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.grass.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.wet_grass.step": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.grass.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
   "block.wet_sponge.break": {
     "replace": true,
     "sounds": [
@@ -2823,6 +2813,16 @@
     "replace": true,
     "sounds": [],
     "subtitle": "subtitles.entity.generic.swim"
+  },
+  "item.crop.plant": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "block.grass.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
   },
   "music.game": {
     "replace": true,
