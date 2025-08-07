@@ -20,25 +20,29 @@
         "discipline": "Classic Reimagined Contributions",
         "titles": [
           {
-            "title": "Original Creator of Classic Reimagined",
+            "title": "Doge Studios Team",
             "names": [
+              "Ark360",
               "MrGlitchDogePE"
             ]
           },
           {
-            "title": "Classic Reimagined 3D Modeling",
+            "title": "Audio Team",
+            "names": [
+              "FortyTheFox",
+              "Shmoobalizer"
+            ]
+          },
+          {
+            "title": "Classic Reimagined Developers",
             "names": [
               "BaconSeer",
               "Bold Muddy",
               "Crodattilo",
-              "MrGlitchDogePE"
-            ]
-          },
-          {
-            "title": "Classic Reimagined Atmosphere (Optifine)",
-            "names": [
+              "Fayer3",
               "MrGlitchDogePE",
-              "Sencie",
+              "NeRdTheNed",
+              "Sam Hocevar",
               "Shmoobalizer"
             ]
           },
@@ -75,24 +79,10 @@
             ]
           },
           {
-            "title": "MCTextureGen Developer",
+            "title": "Platform Developers",
             "names": [
-              "NeRdTheNed"
-            ]
-          },
-          {
-            "title": "Audio Team",
-            "names": [
-              "FortyTheFox",
-              "Shmoobalizer"
-            ]
-          },
-          {
-            "title": "Shaders Developers",
-            "names": [
-              "Fayer3",
               "MrGlitchDogePE",
-              "Sam Hocevar",
+              "Sencie",
               "Shmoobalizer"
             ]
           }
