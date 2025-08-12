@@ -51,9 +51,18 @@
         "directory": "1.21.6_shaders",
         "formats": [
           63,
-          2147483647
+          64
         ],
         "min_format": 63,
+        "max_format": 64
+      },
+      {
+        "directory": "1.21.9_shaders",
+        "formats": [
+          65,
+          2147483647
+        ],
+        "min_format": 65,
         "max_format": 2147483647
       },
       {
