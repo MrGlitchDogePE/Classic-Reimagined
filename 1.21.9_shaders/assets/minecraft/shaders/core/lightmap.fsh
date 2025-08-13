@@ -1,5 +1,3 @@
-#version 460
-
 layout(std140) uniform LightmapInfo {
     float AmbientLightFactor;
     float SkyFactor;
