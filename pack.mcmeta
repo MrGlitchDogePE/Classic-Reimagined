@@ -1,13 +1,13 @@
 {
   "pack": {
-    "pack_format": 18,
+    "pack_format": 15,
     "supported_formats": [
-      18,
+      15,
       2147483647
     ],
-    "min_format": 18,
+    "min_format": 15,
     "max_format": 2147483647,
-    "description": "By §2MrGlitchDogePE§r§f§r for\r\n§a1.20.2+§r §ecompatible with§r §f§r §e&§r §f§r"
+    "description": "By §2MrGlitchDogePE§r§f§r for §a1.20.2+§r §ecompatible with§r §f§r §e&§r §f§r"
   },
   "overlays": {
     "entries": [
@@ -66,25 +66,7 @@
         "max_format": 2147483647
       },
       {
-        "directory": "mc-1.13a",
-        "formats": [
-          18,
-          2147483647
-        ],
-        "min_format": 18,
-        "max_format": 2147483647
-      },
-      {
         "directory": "legacy_sounds",
-        "formats": [
-          18,
-          2147483647
-        ],
-        "min_format": 18,
-        "max_format": 2147483647
-      },
-      {
-        "directory": "v7.12.3rt-1.20",
         "formats": [
           18,
           2147483647
