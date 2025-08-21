@@ -2,12 +2,10 @@ layout(std140) uniform LightmapInfo {
     float AmbientLightFactor;
     float SkyFactor;
     float BlockFactor;
-    int UseBrightLightmap;
     float NightVisionFactor;
     float DarknessScale;
     float DarkenWorldFactor;
     float BrightnessFactor;
-    vec3 AmbientColor;
 } lightmapInfo;
 
 const float BETA_LIGHT[16] = float[](
