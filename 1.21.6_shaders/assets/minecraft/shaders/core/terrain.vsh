@@ -1,3 +1,5 @@
+#version 460
+
 #moj_import <minecraft:fog.glsl>
 #moj_import <minecraft:dynamictransforms.glsl>
 #moj_import <minecraft:projection.glsl>
@@ -6,7 +8,6 @@ in vec3 Position;
 in vec4 Color;
 in vec2 UV0;
 in ivec2 UV2;
-in vec3 Normal;
 
 uniform sampler2D Sampler2;
 
@@ -23,6 +24,14 @@ void main() {
     sphericalVertexDistance = fog_spherical_distance(pos);
     cylindricalVertexDistance = fog_cylindrical_distance(pos);
     lightMapColor = texelFetch(Sampler2, UV2 / 16, 0);
-    vertexColor = Color * ColorModulator * lightMapColor;
+
+    // Fix: Use '==' for comparison and compare against a vec4, not a float
+    vec4 targetColor = vec4(229.0 / 255.0, 229.0 / 255.0, 229.0 / 255.0, 1.0);
+    if (Color == targetColor) {
+        vertexColor = ColorModulator * lightMapColor;
+    } else {
+        vertexColor = Color * ColorModulator * lightMapColor;
+    }
+
     texCoord0 = UV0;
 }
