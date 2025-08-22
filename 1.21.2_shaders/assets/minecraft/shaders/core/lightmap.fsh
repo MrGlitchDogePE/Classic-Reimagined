@@ -50,7 +50,6 @@ void main() {
     float light_factor = BETA_LIGHT[final_index];
 
     vec3 color = vec3(light_factor);
-    color *= (1.0 + BrightnessFactor);
 
     // Apply night vision enhancement
     if (NightVisionFactor > 0.0) {
@@ -60,6 +59,6 @@ void main() {
             color = mix(color, boosted, NightVisionFactor);
         }
     }
-
-    fragColor = vec4(color, 1.0);
+    // Apply brightness factor
+    fragColor = pow(vec4(color, 1.0), vec4(1.0 / (1.0 + BrightnessFactor)));
 }
