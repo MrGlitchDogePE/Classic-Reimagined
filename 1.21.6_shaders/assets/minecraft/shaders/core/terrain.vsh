@@ -1,5 +1,3 @@
-#version 460
-
 #moj_import <minecraft:fog.glsl>
 #moj_import <minecraft:dynamictransforms.glsl>
 #moj_import <minecraft:projection.glsl>
@@ -16,7 +14,6 @@ out float sphericalVertexDistance;
 out float cylindricalVertexDistance;
 out vec4 vertexColor;
 out vec4 lightMapColor;
-out vec4 overlayColor;
 out vec2 texCoord0;
 
 void main() {
@@ -25,7 +22,7 @@ void main() {
 
     sphericalVertexDistance = fog_spherical_distance(pos);
     cylindricalVertexDistance = fog_cylindrical_distance(pos);
-    vertexColor = Color;
-    vertexColor *= lightMapColor = texelFetch(Sampler2, UV2 / 16, 0);
+    lightMapColor = texelFetch(Sampler2, UV2 / 16, 0);
+    vertexColor = Color * ColorModulator * lightMapColor;
     texCoord0 = UV0;
 }
