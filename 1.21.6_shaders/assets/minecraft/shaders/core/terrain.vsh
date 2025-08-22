@@ -15,22 +15,17 @@ uniform sampler2D Sampler2;
 out float sphericalVertexDistance;
 out float cylindricalVertexDistance;
 out vec4 vertexColor;
+out vec4 lightMapColor;
+out vec4 overlayColor;
 out vec2 texCoord0;
-
-vec2 get_lightmap_uv(ivec2 uv) {
-    return clamp(((vec2(uv) * 0.0625) + 0.5) * 0.0625, 0.0, 1.0);
-}
 
 void main() {
     vec3 pos = Position + ModelOffset;
-
-    // Compute once and reuse everywhere
     gl_Position = ProjMat * ModelViewMat * vec4(pos, 1.0);
 
     sphericalVertexDistance = fog_spherical_distance(pos);
     cylindricalVertexDistance = fog_cylindrical_distance(pos);
-
-    // Avoid multiple texture samples and unnecessary color math
-    vertexColor = Color * texture(Sampler2, get_lightmap_uv(UV2));
+    vertexColor = Color;
+    vertexColor *= lightMapColor = texelFetch(Sampler2, UV2 / 16, 0);
     texCoord0 = UV0;
 }
