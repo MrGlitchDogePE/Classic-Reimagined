@@ -32,7 +32,7 @@ void main() {
     vec3 color = vec3(light_factor / 255.0);
 
     // Keep Ambient Color and Ambient Light as-is
-    color = mix(color, lightmapInfo.AmbientColor, lightmapInfo.AmbientLightFactor);
+    color = mix(color, lightmapInfo.AmbientColor, 0.0525);
 
     // Night Vision logic (unchanged)
     if (lightmapInfo.NightVisionFactor > 0.0) {
