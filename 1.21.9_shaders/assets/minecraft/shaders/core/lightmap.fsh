@@ -1,3 +1,5 @@
+#moj_import <betalight.glsl>
+
 layout(std140) uniform LightmapInfo {
     float AmbientLightFactor;
     float SkyFactor;
@@ -7,25 +9,6 @@ layout(std140) uniform LightmapInfo {
     float DarkenWorldFactor;
     float BrightnessFactor;
 } lightmapInfo;
-
-const float BETA_LIGHT[16] = float[](
-    12,
-    16,
-    21,
-    26,
-    32,
-    39,
-    47,
-    56,
-    66,
-    78,
-    93,
-    111,
-    133,
-    162,
-    201,
-    255
-);
 
 in vec2 texCoord;
 out vec4 fragColor;
