@@ -8,12 +8,9 @@ layout(std140) uniform LightmapInfo {
     float DarknessScale;
     float DarkenWorldFactor;
     float BrightnessFactor;
-    vec3 SkyLightColor;
-    vec3 AmbientColor;
 } lightmapInfo;
 
 in vec2 texCoord;
-
 out vec4 fragColor;
 
 int spread(float f, int x) {
@@ -25,24 +22,23 @@ void main() {
     int sky_light = spread(texCoord.y, 15);
     int sky_factor = clamp(spread(1.0 - lightmapInfo.SkyFactor, 15), 0, 11);
 
+    // Subtract sky_factor from sky_light and clamp the result
     int adjusted_sky = clamp(sky_light - sky_factor, 0, 15);
+
+    // Use the higher value between block light and adjusted sky light
     int final_index = max(block_light, adjusted_sky);
     float light_factor = BETA_LIGHT[final_index];
 
-    vec3 color = vec3(light_factor / 255.0);
+    vec3 color = vec3(light_factor / 255);
 
-    // Keep Ambient Color and Ambient Light as-is
-    color = mix(color, lightmapInfo.AmbientColor, lightmapInfo.AmbientLightFactor / 2.25);
-
-    // Night Vision logic (unchanged)
+    // Apply night vision enhancement
     if (lightmapInfo.NightVisionFactor > 0.0) {
-        float max_component = max(color.r, max(color.g, color.b));
-        if (max_component < 1.0) {
-            vec3 bright_color = color / max_component;
-            color = mix(color, bright_color, lightmapInfo.NightVisionFactor);
+        float max_comp = max(color.r, max(color.g, color.b));
+        if (max_comp < 1.0) {
+            vec3 boosted = color / max_comp;
+            color = mix(color, boosted, lightmapInfo.NightVisionFactor);
         }
     }
-
-    color = clamp(color, 0.0, 1.0);
-    fragColor = vec4(color, 1.0);
+    // Apply brightness factor
+    fragColor = pow(vec4(color, 1.0), vec4(1.0 / (1.0 + lightmapInfo.BrightnessFactor)));
 }

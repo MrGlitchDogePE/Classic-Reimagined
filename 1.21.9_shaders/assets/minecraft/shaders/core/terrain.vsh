@@ -14,6 +14,10 @@ out vec4 vertexColor;
 out vec4 lightMapColor;
 out vec2 texCoord0;
 
+vec4 minecraft_sample_lightmap(sampler2D lightMap, ivec2 uv) {
+    return texture(lightMap, clamp(uv / 256.0, vec2(0.5 / 16.0), vec2(15.5 / 16.0)));
+}
+
 void main() {
     // Apply model offset to position
     vec3 pos = Position + ModelOffset;
@@ -27,8 +31,8 @@ void main() {
     // Fix: Use '==' for comparison and compare against a vec4, not a float
     vec4 targetColor = vec4(229.0 / 255.0, 229.0 / 255.0, 229.0 / 255.0, 1.0);
     if (Color == targetColor) {
-        vertexColor = Color * ColorModulator * lightMapColor;
-        vertexColor *= 1.100436681222707;
+        vertexColor = Color * minecraft_sample_lightmap(Sampler2, UV2);
+        vertexColor *= 1.223300970873786;
     } else {
         vertexColor = Color * ColorModulator * lightMapColor;
     }
