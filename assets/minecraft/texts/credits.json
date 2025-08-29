@@ -34,48 +34,36 @@
             ]
           },
           {
-            "title": "Classic Reimagined Developers",
-            "names": [
-              "BaconSeer",
-              "Bold Muddy",
-              "Crodattilo",
-              "Fayer3",
-              "MrGlitchDogePE",
-              "NeRdTheNed",
-              "Sam Hocevar",
-              "Shmoobalizer"
-            ]
-          },
-          {
-            "title": "Classic Reimagined Texture Artists",
+            "title": "Classic Reimagined Resource Pack Developers",
             "names": [
               "2XMM2",
               "Agus_punk",
+              "BaconSeer",
+              "Balint",
               "blank3times",
+              "BlueStaggo",
+              "Bold Muddy",
               "Crackers0106",
+              "Crodattilo",
               "Eamon",
               "Ewan Howell",
+              "Fayer3",
               "ic22487",
               "InfiniteVoid",
+              "ioblackshaw",
               "MidniteDemolisher",
               "monsterfart77 (InfiniteVoid)",
               "MrGlitchDogePE",
+              "MuzikBike",
               "Narotiza",
+              "NeRdTheNed",
               "podunktimes",
               "PoeticRainbow",
+              "Sam Hocevar",
               "Sbstxnslr",
               "Shmoobalizer",
               "TheFiddlerofShiddlers",
               "THGABS"
-            ]
-          },
-          {
-            "title": "Classic Reimagined's Inspiration",
-            "names": [
-              "2XMM2",
-              "JoaquiX",
-              "Shmoobalizer",
-              "Swigly"
             ]
           },
           {
@@ -84,6 +72,40 @@
               "MrGlitchDogePE",
               "Sencie",
               "Shmoobalizer"
+            ]
+          }
+        ]
+      },
+      {
+        "discipline": "Developers of Sodium",
+        "titles": [
+          {
+            "title": "CaffeineMC Development Team",
+            "names": [
+              "JellySquid",
+              "IMS212",
+              "2No2Name",
+              "FlashyReese",
+              "Thebrokenrail",
+              "XanderCheese",
+              "EmortalDev"
+            ]
+          },
+          {
+            "title": "Shader Developers",
+            "names": [
+              "Balint",
+              "RubenDev",
+              "Corgi"
+            ]
+          },
+          {
+            "title": "Community Contributors",
+            "names": [
+              "NotNite",
+              "LambdAurora",
+              "Patbox",
+              "comp500"
             ]
           }
         ]
@@ -111,52 +133,6 @@
             "title": "Web Development",
             "names": [
               "MSpaceDev"
-            ]
-          }
-        ]
-      },
-      {
-        "discipline": "Classic Reimagined Downloads",
-        "titles": [
-          {
-            "title": "CurseForge",
-            "names": [
-              "https://tinyurl.com/classic24"
-            ]
-          },
-          {
-            "title": "Modrinth",
-            "names": [
-              "https://tinyurl.com/cr10csm"
-            ]
-          }
-        ]
-      },
-      {
-        "discipline": "§2Classic Reimagined Creator Media§r",
-        "titles": [
-          {
-            "title": "§1PayPal§r §f§r",
-            "names": [
-              "@HexyYFSC"
-            ]
-          },
-          {
-            "title": "§bTwitter§r §f§r",
-            "names": [
-              "@MrGlitchDogePE"
-            ]
-          },
-          {
-            "title": "§cYouTube§r §f§r",
-            "names": [
-              "@MrGlitchDogePE"
-            ]
-          },
-          {
-            "title": "§9Discord§r §f§r",
-            "names": [
-              "discord.gg/ZcUYNH6dvT"
             ]
           }
         ]
