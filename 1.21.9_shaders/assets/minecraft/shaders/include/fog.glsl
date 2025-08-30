@@ -11,6 +11,8 @@ layout(std140) uniform Fog {
 };
 
 float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
+    fogStart /= 3;
+    fogEnd *= ((1 / (abs(FogEnvironmentalStart - 1))) + 1) / 2;
     if (vertexDistance <= fogStart) {
         return 0.0;
     } else if (vertexDistance >= fogEnd) {
@@ -34,7 +36,5 @@ float fog_spherical_distance(vec3 pos) {
 }
 
 float fog_cylindrical_distance(vec3 pos) {
-    float distXZ = length(pos.xz);
-    float distY = abs(pos.y);
-    return max(distXZ, distY);
+    return length(pos);
 }
