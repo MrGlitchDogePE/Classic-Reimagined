@@ -1,3 +1,7 @@
 {
-  "resourcePack.title": "§a§lBetter Default 7§r by MrGlitchDogePE"
+  "resourcePack.title": "§a§lOrder §7(Top to Bottom)",
+  "pack.dropInfo": "§eBetter Default§d*§e, Better Default Core, Vanilla",
+  "resourcePack.vanilla.name": "§a§lVanilla §7(required)",
+  "resourcePack.vanilla.description": "§f↑ Better Default Core\nKeep the Pack order",
+  "resourcePack.programmer_art.name": "§a§lBetter Default §7v7.12.3-core"
 }

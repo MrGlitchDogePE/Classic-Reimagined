@@ -1,3 +1,7 @@
 {
-  "resourcePack.title": "§a§lMinecraft Classic Reimagined 10§r by MrGlitchDogePE"
+  "resourcePack.title": "§a§lOrder §7(Top to Bottom)",
+  "pack.dropInfo": "§eClassic Reimagined for Sodium§d*§e, Classic Reimagined, Minecraft 1.13 textures, Vanilla",
+  "resourcePack.vanilla.name": "§aVanilla §7v10.0.1",
+  "resourcePack.vanilla.description": "§f↑ Minecraft 1.13 textures\nKeep the Pack order",
+  "resourcePack.programmer_art.name": "§aMinecraft 1.13 textures §7(core)"
 }
