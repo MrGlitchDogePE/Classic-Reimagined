@@ -1,5 +1,3 @@
-#version 150
-
 layout(std140) uniform Fog {
     vec4 FogColor;
     float FogEnvironmentalStart;
@@ -12,7 +10,6 @@ layout(std140) uniform Fog {
 
 float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
     fogStart /= 3;
-    fogEnd *= ((1 / (abs(FogEnvironmentalStart - 1))) + 1) / 2;
     if (vertexDistance <= fogStart) {
         return 0.0;
     } else if (vertexDistance >= fogEnd) {
