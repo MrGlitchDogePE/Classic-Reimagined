@@ -1,5 +1,4 @@
-// Code by MrGlitchDogePE
-#moj_import <dynamictransforms.glsl>
+#version 150
 
 layout(std140) uniform Fog {
     vec4 FogColor;
@@ -11,47 +10,31 @@ layout(std140) uniform Fog {
     float FogCloudsEnd;
 };
 
-const int shape = 0; // 0 = spherical, 1 = cylindrical, 2 = planar, 3 = experimental
-
-// Linear fog calculation
-float linear_fog_value(float distance, float start, float end) {
-    float adjustedStart = start / 3.0;
-    if (distance <= adjustedStart) return 0.0;
-    if (distance >= end) return 1.0;
-    return (distance - adjustedStart) / (end - adjustedStart);
-}
-
-// Combined fog value from spherical and cylindrical distances
-float total_fog_value(float sphericalDist, float cylindricalDist, float envStart, float envEnd, float renderStart, float renderEnd) {
-    float envFog = linear_fog_value(sphericalDist, envStart, envEnd);
-    float renderFog = linear_fog_value(cylindricalDist, renderStart, renderEnd);
-    return max(envFog, renderFog);
-}
-
-// Apply fog to color
-vec4 apply_fog(vec4 color, float sphericalDist, float cylindricalDist, float envStart, float envEnd, float renderStart, float renderEnd, vec4 fogColor) {
-    float fogFactor = total_fog_value(sphericalDist, cylindricalDist, envStart, envEnd, renderStart, renderEnd);
-    return vec4(mix(color.rgb, fogColor.rgb, fogFactor * fogColor.a), color.a);
-}
-
-// Fog distance based on shape
-float fog_cylindrical_distance(vec3 pos) {
-    vec4 viewPos = ModelViewMat * vec4(pos, 1.0);
-    switch (shape) {
-        case 0: return length(pos); // Spherical
-        case 1: return max(length(pos.xz), abs(pos.y)); // Cylindrical
-        case 2: return abs(viewPos.z); // Planar
-        case 3: return max(abs(viewPos.z), length(pos.zx)); // Experimental
-        default: return length(pos); // Fallback
+float linear_fog_value(float vertexDistance, float fogStart, float fogEnd) {
+    if (vertexDistance <= fogStart) {
+        return 0.0;
+    } else if (vertexDistance >= fogEnd) {
+        return 1.0;
     }
+
+    return (vertexDistance - fogStart) / (fogEnd - fogStart);
 }
 
-// Spherical fog distance
+float total_fog_value(float sphericalVertexDistance, float cylindricalVertexDistance, float environmentalStart, float environmantalEnd, float renderDistanceStart, float renderDistanceEnd) {
+    return max(linear_fog_value(sphericalVertexDistance, environmentalStart, environmantalEnd), linear_fog_value(cylindricalVertexDistance, renderDistanceStart, renderDistanceEnd));
+}
+
+vec4 apply_fog(vec4 inColor, float sphericalVertexDistance, float cylindricalVertexDistance, float environmentalStart, float environmantalEnd, float renderDistanceStart, float renderDistanceEnd, vec4 fogColor) {
+    float fogValue = total_fog_value(sphericalVertexDistance, cylindricalVertexDistance, environmentalStart, environmantalEnd, renderDistanceStart, renderDistanceEnd);
+    return vec4(mix(inColor.rgb, fogColor.rgb, fogValue * fogColor.a), inColor.a);
+}
+
 float fog_spherical_distance(vec3 pos) {
-    return length(ModelViewMat * vec4(pos, 1.0));
+    return length(pos);
 }
 
-// Planar fog distance
-float fog_planar_distance(vec3 pos) {
-    return abs((ModelViewMat * vec4(pos, 1.0)).z);
+float fog_cylindrical_distance(vec3 pos) {
+    float distXZ = length(pos.xz);
+    float distY = abs(pos.y);
+    return max(distXZ, distY);
 }
