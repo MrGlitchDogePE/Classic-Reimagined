@@ -7,7 +7,7 @@ in vec4 vertexColor;
 out vec4 fragColor;
 
 void main() {
-    vec4 color = vec4(1.0, 1.0, 1.0, 1.0);
+    vec4 color = vec4(1.0, 1.0, 1.0, vertexColor.a);
     color.rgb *= mix(vertexColor.rgb, FogColor.rgb, total_fog_value(vertexDistance, vertexDistance, FogEnvironmentalStart, FogEnvironmentalEnd, FogRenderDistanceStart, FogRenderDistanceEnd));
     color.a *= sqrt(1.0f - pow(classic_fog_value(vertexDistance, 0, FogCloudsEnd), 2));
     // fog color calculation

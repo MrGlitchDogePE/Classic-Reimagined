@@ -20,7 +20,7 @@ vec4 calculateFinalColor(vec4 color) {
 }
 
 void main() {
-    vec4 color = vec4(1.0, 1.0, 1.0, 1.0);
+    vec4 color = vec4(1.0, 1.0, 1.0, vertexColor.a);
     color.rgb *= mix(vertexColor.rgb, FogColor.rgb, total_fog_value(vertexDistance, vertexDistance, FogEnvironmentalStart, FogEnvironmentalEnd, FogRenderDistanceStart, FogRenderDistanceEnd));
     #ifndef OIT_DEPTH_BOUNDS
     color.a *= sqrt(1.0f - pow(classic_fog_value(vertexDistance, 0, FogCloudsEnd), 2));
