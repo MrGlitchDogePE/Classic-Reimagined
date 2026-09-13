@@ -23,8 +23,8 @@ void main() {
     vec4 color = vec4(1.0, 1.0, 1.0, 1.0);
     color.rgb *= mix(vertexColor.rgb, FogColor.rgb, total_fog_value(vertexDistance, vertexDistance, FogEnvironmentalStart, FogEnvironmentalEnd, FogRenderDistanceStart, FogRenderDistanceEnd));
     #ifndef OIT_DEPTH_BOUNDS
-    color.a *= floor((1.0f - pow(linear_fog_value(vertexDistance, 1.0, FogCloudsEnd), 2)) * vertexColor.a * 255) /255;
-    #endif
+    color.a *= sqrt(1.0f - pow(classic_fog_value(vertexDistance, 0, FogCloudsEnd), 2));
+     #endif
 
     #ifdef OIT_ALPHA_ONLY
     executeAlphaOnlyPhase(gl_FragCoord.z, color.a);
